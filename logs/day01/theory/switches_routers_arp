@@ -1,0 +1,27 @@
+# 🔌 Day 01 – Switches & Routers (Network Basics)
+
+## 🧠 Topics Covered:
+- **Switches**: 
+  - Operate at Layer 2 (Data Link)
+  - Maintains a CAM (Content Addressable Memory) table [Vlan , Source MAC Address , Type(Static / Dynamic) , Port(eg. Fa0/1)] to forward frames using MAC addresses
+  - Each port is a collision domain
+
+- **Routers**:
+  - Operate at Layer 3 (Network)
+  - Route packets using IP addresses
+  - Each interface is a broadcast domain
+
+-**ARP*:
+  - ARP(Address Resolution Protocol) is used to discover MAC address of dest. via broadcast.
+  - **Command used** - enable 
+                     - # show mac-address-table
+
+## 🛠️ Tools/Visuals:
+- Watched: NetworkChuck – Switches vs Routers
+- Notes taken on how data flows through networks
+- Understood segmentation of networks and their role in security
+- Packet tracer
+
+## 🔁 Lab:
+- Practice building a LAN with switches, routers, DNS, access points on Packet Tracer
+- Default gateways and subnetting
