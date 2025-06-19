@@ -1,0 +1,34 @@
+**logs**
+PS C:\Windows\system32> arp -a
+
+Interface: 192.168.251.152 --- 0x9
+  Internet Address      Physical Address      Type
+  192.168.251.167       1e-15-03-10-05-de     dynamic
+  192.168.251.255       ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+PS C:\Windows\system32> netsh interface ip delete arpcache
+Ok.
+
+PS C:\Windows\system32> ping 192.168.251.167
+
+Pinging 192.168.251.167 with 32 bytes of data:
+Reply from 192.168.251.167: bytes=32 time=7ms TTL=64
+Reply from 192.168.251.167: bytes=32 time=3ms TTL=64
+Reply from 192.168.251.167: bytes=32 time=2ms TTL=64
+Reply from 192.168.251.167: bytes=32 time=3ms TTL=64
+
+Ping statistics for 192.168.251.167:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 7ms, Average = 3ms
+PS C:\Windows\system32> arp -a
+
+Interface: 192.168.251.152 --- 0x9
+  Internet Address      Physical Address      Type
+  192.168.251.167       1e-15-03-10-05-de     dynamic
+  224.0.0.22            01-00-5e-00-00-16     static
+PS C:\Windows\system32>
